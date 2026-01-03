@@ -1,0 +1,124 @@
+/* ===============================
+   GLOBAL RESET & BASE
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #fbfdff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* ===============================
+   FIXED HEADER & FOOTER SAFETY
+================================ */
+main {
+  scroll-behavior: smooth;
+}
+
+/* Prevent content hiding under fixed header */
+.header-offset {
+  padding-top: 4rem; /* 64px */
+}
+
+/* Prevent content hiding under mobile footer */
+.footer-offset {
+  padding-bottom: 4rem; /* 64px */
+}
+
+/* ===============================
+   SIDEBAR
+================================ */
+aside {
+  background-color: #ffffff;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn-primary {
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+/* ===============================
+   SCROLLBAR (HIDDEN BUT SMOOTH)
+================================ */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ===============================
+   MOBILE NAV SHADOW
+================================ */
+.mobile-nav {
+  box-shadow: 0 -5px 20px rgba(15, 23, 42, 0.06);
+}
+
+/* ===============================
+   TYPOGRAPHY
+================================ */
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ===============================
+   IMAGE FIX
+================================ */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
