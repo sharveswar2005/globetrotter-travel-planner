@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ NEW
 import {
   Map,
   TrendingUp,
@@ -24,6 +25,7 @@ const RECOMMENDATIONS = [
 /* ---------------- COMPONENT ---------------- */
 const Home = () => {
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate(); // ✅ NEW
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
@@ -72,9 +74,13 @@ const Home = () => {
             <p className="text-slate-500">Plan your next adventure</p>
           </div>
 
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-xl flex items-center gap-2 shadow">
+          {/* ✅ UPDATED BUTTON */}
+          <button
+            onClick={() => navigate("/calendar")}
+            className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-xl flex items-center gap-2 shadow"
+          >
             <Plus className="w-5 h-5" />
-            Plan New Trip
+            Calendar View
           </button>
         </div>
 
